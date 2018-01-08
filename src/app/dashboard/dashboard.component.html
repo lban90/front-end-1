@@ -1,0 +1,16 @@
+<div>
+  <div>
+<ul class="items">
+  <li *ngFor="let item of itemsDashboard" [class.selected]="item === selectedItemDashboard"(click)="onSelect(item)">
+    <span class="badge">{{item.id}}</span> {{item.manufacturer}} {{item.name}} {{item.description}} {{item.cuantity}} {{item.price}}
+  </li>
+</ul>
+  </div>
+ <div>
+<div *ngIf="selectedItemDashboard">
+  <h2>
+    {{selectedItemDashboard.name | uppercase}} is my selected item</h2>
+  <button (click)="gotoDetailPresentation()">View Detail</button>
+</div>
+  </div>
+</div>

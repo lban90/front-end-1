@@ -1,0 +1,38 @@
+<mat-card>
+<mat-expansion-panel class="items" *ngFor="let item of itemsUpdate" [class.selected]="item === selectedItemUpdate"(click)="onSelect(item)">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{item.id}}
+    </mat-panel-title>
+    <mat-panel-description>
+      {{item.manufacturer}}
+    </mat-panel-description>
+    <mat-panel-description>
+      {{item.name}}
+    </mat-panel-description>
+    <mat-panel-description>
+      {{item.cuantity}}
+    </mat-panel-description>
+    <mat-panel-description>
+      {{item.price}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+
+  <mat-form-field>
+    Object Description: {{item.description}}
+  </mat-form-field>
+  <mat-form-field>
+  <mat-panel-description>
+    <button mat-mini-fab collor="red" class="addOne" (click)="saveAddOne()">+</button>
+  </mat-panel-description>
+  <mat-panel-description>
+    <input matInput [(ngModel)]="item.cuantity" placeholder="cuantity" dividerColor="accent"/>
+  </mat-panel-description>
+  <mat-panel-description>
+    <button mat-raised-button  class="substractOne" (click)="saveSubstractOne()">-</button>
+  </mat-panel-description>
+  </mat-form-field>
+</mat-expansion-panel>
+
+</mat-card>

@@ -1,0 +1,11 @@
+<div *ngIf="item">
+  <div>{{item.name}} Selected item details</div>
+  <div><label>id: </label>{{item.id}}</div>
+  <div><label>manufacturer: </label>{{item.manufacturer}} </div>
+  <div><label>name: </label>{{item.name}}</div>
+  <div><label>descriprion: </label>{{item.description}}</div>
+  <div><label>cuantity: </label>{{item.cuantity}}</div>
+  <div><label>price: </label>{{item.price}}</div>
+  <button (click)="goBack()">Back</button>
+</div>
+

@@ -1,0 +1,7 @@
+  <div><label>Manufacturer: </label><input #itemManufacturer/></div>
+  <div><label>Name: </label><input #itemName/></div>
+  <div><label>Description: </label><input #itemDescription/></div>
+  <div><label>Cuantity: </label><input pattern='[0-9]' #itemCuantity/></div>
+  <div><label>Price: </label><input pattern='[0-9]' #itemPrice/></div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="add(itemManufacturer.value.trim(),itemName.value.trim(),itemDescription.value.trim(),itemCuantity.value,itemPrice.value)">Add</button>
